@@ -17,7 +17,7 @@ fn main() {
     };
     cc::Build::new()
         .define("DECLITEND", Some(declitend))
-        .flag_if_supported("-O3")
+        .opt_level(3)
         .file("decnumber/decimal128.c")
         .file("decnumber/decimal64.c")
         .file("decnumber/decimal32.c")
